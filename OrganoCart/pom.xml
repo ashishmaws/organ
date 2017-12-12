@@ -7,7 +7,34 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>OrganoCart Maven Webapp</name>
 	<url>http://maven.apache.org</url>
+	 <properties>
+    <webdriver.chrome>C:\Users\Administrator\Desktop\eclipse-jee-juno-SR2-win32-x86_64\eclipse\chromedriver.exe</webdriver.chrome>
+</properties>
 	<dependencies>
+	<dependency>
+    <groupId>org.testng</groupId>
+    <artifactId>testng</artifactId>
+    <version>6.13.1</version>
+    <scope>test</scope>
+</dependency>
+
+<dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-java</artifactId>
+    <version>3.8.1</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-server -->
+<dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-server</artifactId>
+    <version>3.8.1</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-chrome-driver -->
+<dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-chrome-driver</artifactId>
+    <version>3.8.1</version>
+</dependency>
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
@@ -186,8 +213,24 @@
 		</dependency>
 	</dependencies>
 	<build>
+	
 		<finalName>OrganoCart</finalName>
+		
 		<plugins>
+		  <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>2.20.1</version>
+        <configuration>
+        <systemPropertyVariables>
+            <webdriver.chrome.driver>${webdriver.chrome}</webdriver.chrome.driver>
+        </systemPropertyVariables>
+          <suiteXmlFiles>
+            <suiteXmlFile>testng.xml</suiteXmlFile>
+          </suiteXmlFiles>
+        </configuration>
+      </plugin>
+    
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
