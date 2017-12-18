@@ -13,9 +13,8 @@ public class organocar {
 		System.out.println("Welcome to Jenkins");
 		WebDriver driver=new ChromeDriver();
 		driver.get("http://54.206.104.208:8080/dev");
-		System.out.println(driver.getTitle());
-		driver.quit();
 		assertEquals("Home-OrganoCart", driver.getTitle() );
+		driver.quit();
 	}
 	
 }
