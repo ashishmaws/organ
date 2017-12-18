@@ -15,7 +15,7 @@ public class organocar {
 		driver.get("http://54.206.104.208:8080/dev");
 		System.out.println(driver.getTitle());
 		driver.quit();
-		assertEquals("Home-O", driver.getTitle() );
+		assertEquals("Home-OrganoCart", driver.getTitle() );
 	}
 	
 }
