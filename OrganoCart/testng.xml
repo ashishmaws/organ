@@ -3,7 +3,10 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="test.testngclass"/>
+      <class name="organofunction.FooterAbout"/>
+      <class name="organofunction.ContactUs"/>
+      <class name="organofunction.OrganoHeading"/>
+      <class name="organofunction.organocar"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
