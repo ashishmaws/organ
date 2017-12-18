@@ -1,5 +1,5 @@
 package test;
-
+import static org.testng.Assert.assertEquals;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
@@ -7,11 +7,12 @@ import org.testng.annotations.Test;
 public class testngclass {
 	@Test
 	public void test() {
-		System.setProperty("webdriver.chromedriver.driver","C://Users//Administrator//Desktop//eclipse-jee-juno-SR2-win32-x86_64//eclipse//chromedriver.exe");
 		System.out.println("Welcome to Jenkins");
 		WebDriver driver=new ChromeDriver();
-		driver.get("http://54.252.162.4:8080/Organo");
+		driver.get("http://54.206.104.208:8080/dev");
 		System.out.println(driver.getTitle());
+		assertEquals("Home-O", driver.getTitle() );
 		driver.quit();
-	}
+}
+
 }
