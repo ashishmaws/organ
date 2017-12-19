@@ -8,7 +8,7 @@
 	<name>OrganoCart Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 	<properties>
-   	 <webdriver.chrome>/usr/local/share/chromedriver</webdriver.chrome>
+   		 <webdriver.chrome>C:\Users\Administrator\Desktop\eclipse-jee-juno-SR2-win32-x86_64\eclipse\chromedriver.exe</webdriver.chrome>
 	</properties>
 	<dependencies>
 	<dependency>
@@ -223,7 +223,7 @@
         <version>2.20.1</version>
         <configuration>
         <systemPropertyVariables>
-            <webdriver.chrome.driver>/usr/local/share/chromedriver</webdriver.chrome.driver>
+            <webdriver.chrome.driver>${webdriver.chrome}</webdriver.chrome.driver>
         </systemPropertyVariables>
           <suiteXmlFiles>
             <suiteXmlFile>testng.xml</suiteXmlFile>
