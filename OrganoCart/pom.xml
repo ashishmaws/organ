@@ -223,7 +223,7 @@
         <version>2.20.1</version>
         <configuration>
         <systemPropertyVariables>
-            <webdriver.chrome.driver>${webdriver.chrome}</webdriver.chrome.driver>
+            <webdriver.chrome.driver>/usr/local/share/chromedriver</webdriver.chrome.driver>
         </systemPropertyVariables>
           <suiteXmlFiles>
             <suiteXmlFile>testng.xml</suiteXmlFile>
